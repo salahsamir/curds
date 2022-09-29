@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="head">
+        <h2 class="fw-bold">curds</h2>
+        <p class="fs-6">product management system</p>
+      </div>
+      <div class="input">
+        <input type="search" placeholder="title" id="title">
+        <div class="price">
+          <input onkeyup="gettotal()" type="search" placeholder="price" id="price" >
+          
+          <input onkeyup="gettotal()" type="search" placeholder="taxes" id="taxes">
+          <input onkeyup="gettotal()" type="search" placeholder="abs" id="abs">
+          <input onkeyup="gettotal()" type="search" placeholder="discount" id="discount">
+          
+          <small id="total"></small>
+          
+
+
+        </div>
+
+        <input type="search" placeholder="count" id="count">
+        <input type="search" placeholder="category" id="category">
+        <button id="btn"> create</button>
+
+
+
+
+
+      </div>
+      <div class="error d-none">
+        <div class="cap">
+          <h1 class="mt-5">your input not valid</h1>
+          <button class="btn btn-outline-warning" id="back">back</button>
+        </div>
+      </div>
+      <div class="output">
+        <div class="search py-2">
+          <input type="text" placeholder="search" id="search"  oninput="searchData(this.value)">
+          <div class="searchbtn">
+            <button onclick="searchMood(this.id)" id="titlesearch">search by title</button>
+            <button onclick="searchMood(this.id)" id="catogerysearch">search by category</button>
+
+          </div>
+        </div>
+        <div id="btndel"></div>
+        <table >
+          <thead>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            
+            <th>taxes</th>
+            <th>abs</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>count</th>
+
+
+            <th>category</th>
+            <th>update</th>
+
+            <th>delete</th>
+
+
+          </thead>
+          <tbody id="display">
+            
+
+
+
+          </tbody>
+        </table>
+
+
+
+
+
+
+      </div>
+
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
